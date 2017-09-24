@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+      // Create the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'Days From Jan 1 Value');
+      data.addColumn('number', 'Price');
+      data.addRows([
+        [Economics, 285, 3.00],
+        [Economics, 112, 8.00],
+        [Economics, 335, 15.00],
+        [Economics, 331, 15.00],
+        [Economics, 244, 1.00],
+        [Economics, 160, 3.00],
+        [Economics, 446, 102.00],
+        [Economics, 514, 123.00],
+        [Economics, 59, 99.00],
+        [Economics, 327, 18.00],
+        [Economics, 557, 70.00],
+        [Economics, 95, 80.00],
+        [Economics, 331, 5.00],
+        [Economics, 181, 15.00],
+        [Economics, 250, 12.00],
+        [Economics, 304, 12.00],
+        [Economics, 422, 2.00],
+        [Economics, 335, 11.00],
+        [Economics, 238, 105.00],
+        [Economics, 271, 120.00],
+        [Economics, 258, 96.00],
+        [Economics, 289, 18.00],
+        [Economics, 563, 77.00],
+        [Economics, 491, 76.00],
+        [Economics, 565, 7.00],
+        [Economics, 10, 14.00],
+        [Economics, 144, 18.00],
+        [Economics, 117, 8.00],
+        [Economics, 285, 12.00],
+        [Economics, 489, 14.00],
+        [Economics, 107, 109.00],
+        [Economics, 175, 124.00],
+        [Economics, 389, 99.00],
+        [Economics, 457, 17.00],
+        [Economics, 296, 81.00],
+        [Economics, 299, 74.00],
+        [Economics, 152, 6.00],
+        [Economics, 57, 17.00],
+        [Economics, 601, 13.00],
+        [Economics, 154, 10.00],
+        [Economics, 86, 11.00],
+        [Economics, 600, 24.00],
+        [Economics, 533, 115.00],
+        [Economics, 552, 128.00],
+        [Economics, 313, 104.00],
+      ]);
+
+      // Set chart options
+      var options = {'title':'Economics Sales Data',
+                     'width':500,
+                     'height':500};
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+
+  <body>
+<!--Div that will hold the pie chart-->
+    <div id="chart_div" style="width:400; height:300"></div>
+  </body>
+</html>
