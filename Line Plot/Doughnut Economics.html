@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 72,  64  ],
+        [ 119, 100 ],
+        [ 126, 10  ],
+        [ 134, 16  ],
+        [ 173, 52  ],
+        [ 175, 15  ],
+        [ 361, 8   ],
+        [ 413, 26  ],
+        [ 505, 10  ],
+        [ 531, 15  ],
+        [ 563, 61  ],
+        [ 573, 47  ],
+        [ 577, 28  ],
+        [ 578, 24  ],
+        [ 587, 47  ],
+          ]);
+
+      var options = {
+        title: 'Doughnut Economics Sales',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>

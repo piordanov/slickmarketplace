@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 7,   72  ],
+        [ 75,  20  ],
+        [ 155, 122 ],
+        [ 169, 27  ],
+        [ 256, 179 ],
+        [ 303, 5   ],
+        [ 306, 40  ],
+        [ 382, 123 ],
+        [ 388, 147 ],
+        [ 407, 48  ],
+        [ 411, 31  ],
+        [ 429, 19  ],
+        [ 444, 1   ],
+        [ 475, 18  ],
+        [ 524, 19  ],
+          ]);
+
+      var options = {
+        title: 'Principles of Economics Sales',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>

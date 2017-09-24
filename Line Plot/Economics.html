@@ -1,0 +1,73 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 10, 14   ],
+        [ 57, 17   ],
+        [ 59, 99   ],
+        [ 86, 11   ],
+        [ 95, 80   ],
+        [ 107, 109 ],
+        [ 112, 8   ],
+        [ 117, 8   ],
+        [ 144, 18  ],
+        [ 152, 6   ],
+        [ 154, 10  ],
+        [ 160, 3   ],
+        [ 175, 124 ],
+        [ 181, 15  ],
+        [ 238, 105 ],
+        [ 244, 1   ],
+        [ 250, 12  ],
+        [ 258, 96  ],
+        [ 271, 120 ],
+        [ 285, 3   ],
+        [ 285, 12  ],
+        [ 289, 18  ],
+        [ 296, 81  ],
+        [ 299, 74  ],
+        [ 304, 12  ],
+        [ 313, 104 ],
+        [ 327, 18  ],
+        [ 331, 15  ],
+        [ 331, 5   ],
+        [ 335, 15  ],
+        [ 335, 11  ],
+        [ 389, 99  ],
+        [ 422, 2   ],
+        [ 446, 102 ],
+        [ 457, 17  ],
+        [ 489, 14  ],
+        [ 491, 76  ],
+        [ 514, 123 ],
+        [ 533, 115 ],
+        [ 552, 128 ],
+        [ 557, 70  ],
+        [ 563, 77  ],
+        [ 565, 7   ],
+        [ 600, 24  ],
+        [ 601, 13  ],
+          ]);
+
+      var options = {
+        title: 'Economics Sales',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>

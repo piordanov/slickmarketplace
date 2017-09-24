@@ -1,0 +1,58 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 8,   64  ],
+        [ 46,  32  ],
+        [ 54,  10  ],
+        [ 93,  15  ],
+        [ 101, 1   ],
+        [ 124, 37  ],
+        [ 137, 14  ],
+        [ 151, 97  ],
+        [ 152, 152 ],
+        [ 212, 20  ],
+        [ 224, 44  ],
+        [ 229, 123 ],
+        [ 236, 150 ],
+        [ 240, 161 ],
+        [ 257, 70  ],
+        [ 272, 18  ],
+        [ 277, 38  ],
+        [ 283, 13  ],
+        [ 383, 10  ],
+        [ 398, 7   ],
+        [ 473, 6   ],
+        [ 479, 116 ],
+        [ 487, 10  ],
+        [ 495, 14  ],
+        [ 575, 15  ],
+        [ 580, 169 ],
+        [ 587, 11  ],
+        [ 591, 25  ],
+        [ 594, 14  ],
+        [ 597, 16  ],
+          ]);
+
+      var options = {
+        title: 'Economics Principles in Action',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>

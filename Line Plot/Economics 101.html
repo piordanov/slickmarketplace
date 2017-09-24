@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 13,  30  ],
+        [ 14,  27  ],
+        [ 14,  10  ],
+        [ 30,  159 ],
+        [ 37,  14  ],
+        [ 61,  18  ],
+        [ 109, 114 ],
+        [ 134, 28  ],
+        [ 224, 11  ],
+        [ 452, 8   ],
+        [ 468, 150 ],
+        [ 500, 24  ],
+        [ 503, 127 ],
+        [ 539, 102 ],
+        [ 568, 7   ],
+          ]);
+
+      var options = {
+        title: 'Economics One O One Sales',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>

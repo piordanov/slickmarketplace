@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 82,  52 ],
+        [ 148, 38 ],
+        [ 178, 22 ],
+        [ 300, 28 ],
+        [ 338, 31 ],
+        [ 362, 16 ],
+        [ 368, 40 ],
+        [ 390, 30 ],
+        [ 499, 31 ],
+        [ 519, 61 ],
+        [ 531, 63 ],
+        [ 555, 15 ],
+        [ 565, 21 ],
+        [ 566, 11 ],
+        [ 580, 15 ],
+          ]);
+
+      var options = {
+        title: 'Common Sense Economics Sales',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>

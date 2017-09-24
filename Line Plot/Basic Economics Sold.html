@@ -1,0 +1,43 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date Sold (Number Value)', 'Price Sold'],
+        [ 93,  3  ],
+        [ 99,  38 ],
+        [ 139, 8  ],
+        [ 171, 9  ],
+        [ 293, 32 ],
+        [ 319, 22 ],
+        [ 350, 13 ],
+        [ 351, 12 ],
+        [ 368, 31 ],
+        [ 389, 55 ],
+        [ 398, 57 ],
+        [ 404, 28 ],
+        [ 407, 32 ],
+        [ 455, 48 ],
+        [ 534, 41 ],
+          ]);
+
+      var options = {
+        title: 'Basic Economics Sold',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</body>
+</html>
