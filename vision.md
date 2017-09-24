@@ -13,4 +13,4 @@ Streamlining the buying process was something we wanted to devote a lot of time 
 we can recognize what they are, what the edition is, and estimate the resale value by comparing to existing/past listings on websites like Amazon and eBay.
 
 A lot of the friction in selling is that students don't know how to price their item, and may severely underprice (and sell immediately, but lose out on money) or overprice (and never sell).
-Thus, we see our tool as a helpful third party appraiser that assists in the buying process - eventually, we see the ML/Image recognition becomming a virtual valet, if you will, to help you sell.
+Thus, we see our tool as a helpful third party appraiser that assists in the buying process - eventually, we see the ML/Image recognition becomming a virtual valet, if you will, to help you sell smarter.
