@@ -19,3 +19,4 @@ We utilized Twilio to verify users (so we avoid the scamminess of something like
 We envision having enough data on second-hand resale value of items to actually understand brand sentiment (nobody wants Blackberry phones anymore, value is only 5% of MSRP face value) which we could then use to create actionable insights to perhaps trade (blackrock api!) and pick some winners/ avoid some losers that do particularly well in resale value of products.
 This data we think would also help companies that really only see first-hand sales (ex: Apple with their certified retailers) and thus by providing good data vis on pricing trends over time of depreciating goods and bid/ask spreads between what sellers and buyers want to offer, we can help visualize demand/supply curves to better help companies price their prodcuts in the first place. 
 
+Definitely play around with the item recognition :)
