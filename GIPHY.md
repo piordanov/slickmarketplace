@@ -1,4 +1,4 @@
-Textbook GIFS
+Textbook GIFS gathered from GIPHY API
 
 
 https://giphy.com/embed/12Nq0XPz2CFISA
